@@ -108,7 +108,7 @@ def choose_read1(file, gc, readid, base, prefix="out", platform="mgi"):
     for line in read_fastq(file):
         if (line[0] not in readid) and (stat_gc(line[1]) >= gc):
             continue
-        if platform=="mgi":
+        if platform == "mgi":
             seqid = line[0].split('/')[0]
             reads.add("%s/2" % seqid)
         else:
@@ -162,6 +162,8 @@ def choose_ml_map(file, read1, read2, base="all", prefix="out",
             fo.write("@%s\n" % "\n".join(line))
 
         fo.close()
+    else:
+        LOG.info("Did you enter third-generation sequencing?")
 
     return 0
 
@@ -198,12 +200,12 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
         description='''
 name:
-    choose_ml_map.py Extract possible mitochondrial sequences based on alignment quality and GC.
+    choose_ml_map Extract possible mitochondrial sequences based on alignment quality and GC.
 
 attention:
-    choose_ml_map.py -i input.paf -r1 R1.fastq -r2 R2.fastq  -p mat
-    choose_ml_map.py -i input.paf -r1 R1.fastq -r2 R2.fastq --platform  mgi -p mat
-    choose_ml_map.py -i input.paf -r1 R1.fastq -p mat
+    choose_ml_map -i input.paf -r1 R1.fastq -r2 R2.fastq  -p mat
+    choose_ml_map -i input.paf -r1 R1.fastq -r2 R2.fastq --platform  mgi -p mat
+    choose_ml_map -i input.paf -r1 R1.fastq -p mat
     minimap2 -t 10 -x sr ref.fa R1.fastq R2.fastq | choose_ml_map -r1 R1.fastq -r2 R2.fastq  -p mat 
 
 version: %s

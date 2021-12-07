@@ -3,6 +3,7 @@ Obtain the mitochondrial or chlorophyll sequence from the reads of genome sequen
 
 ## Requirements
 * [Python](https://www.python.org/)
+* [Unicycler](https://github.com/zxgsy520/Unicycler) Modified part of the code on the basis of the original version to make it more suitable for the assembly of bacteriophages, mitochondria and chloroplasts
 ## Installation
 ```
 git clone https://github.com/zxgsy520/recycle.git

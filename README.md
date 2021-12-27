@@ -26,3 +26,6 @@ minimap2 -t 10 -x sr mitochondrion.genomic.fasta clean.r1.fq.gz clean.r2.fq.gz >
 choose_ml_map --input ngs.paf -p mgi --gc 20 --base all --score 0 \
   --read1 clean.r1.fq.gz --read2 clean.r2.fq.gz --prefix mitochondrion_read
 ```
+
+
+![graph](https://user-images.githubusercontent.com/36355222/147458005-47ff1a65-9cca-42cf-b321-6a270b06ac95.png)

@@ -28,4 +28,4 @@ choose_ml_map --input ngs.paf -p mgi --gc 20 --base all --score 0 \
 ```
 
 
-![graph](https://github.com/zxgsy520/recycle/blob/main/docs/mit_filter_graph.png)
+![mit_filter_graph](https://github.com/zxgsy520/recycle/blob/main/docs/mit_filter_graph.png)

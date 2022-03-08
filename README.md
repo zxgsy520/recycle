@@ -24,7 +24,7 @@ Extract mitochondrial chloroplast sequence
 ```
 minimap2 -t 10 -x sr mitochondrion.genomic.fasta clean.r1.fq.gz clean.r2.fq.gz >ngs.paf
 choose_ml_map --input ngs.paf -p mgi --gc 20 --base all --score 0 \
-  --read1 clean.r1.fq.gz --read2 clean.r2.fq.gz --prefix mitochondrion_read
+  --read1 clean.r1.fq.gz --read2 clean.r2.fq.gz --prefix mitochondrion_read    #如果是三代数据，那不需要提供read2，-p 参数设置为illumina，paf文件输入三代比对后的结果即可。
 ```
 
 

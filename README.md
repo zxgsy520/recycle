@@ -4,6 +4,8 @@ Obtain the mitochondrial or chlorophyll sequence from the reads of genome sequen
 ## Requirements
 * [Python](https://www.python.org/)
 * [Unicycler](https://github.com/zxgsy520/Unicycler) Modified part of the code on the basis of the original version to make it more suitable for the assembly of bacteriophages, mitochondria and chloroplasts
+* [gfa1](https://github.com/lh3/gfa1) Processing and transformation of gfa and fastg files
+* [GetOrganelle](https://github.com/Kinggerm/GetOrganelle) Software for assembling mitochondria and chloroplasts (some species have better results)
 * [Bandage](https://github.com/rrwick/Bandage) Some samples need to be manually solved with Bandage
 ## Installation
 ```

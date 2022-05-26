@@ -31,6 +31,9 @@ choose_ml_map --input ngs.paf -p mgi --gc 20 --base all --score 0 \
 Assemble mitochondria from metagenomes
 ```
 megahit -1 clean.r1.fq.gz -2 clean.r2.fq.gz  --num-cpu-threads 20 --out-dir megahit
+megahit_core contig2fastg 119 megahit/intermediate_contigs/k119.contigs.fa > megahit.k119.fastg
+fastg2gfa megahit.k119.fastg > megahit.k119.gfa
+get_organelle_from_assembly.py -F animal_mt -g megahit.k119.gfa -t 10 -o getorganelle
 ```
 
 ![mit_filter_graph](https://github.com/zxgsy520/recycle/blob/main/docs/mit_filter_graph.png)
